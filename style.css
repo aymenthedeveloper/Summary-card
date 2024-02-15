@@ -1,6 +1,6 @@
 :root {
   --radius: 1.5rem;
-  --card-width: clamp(26.5em, 90%, 50em);
+  --card-width: clamp(26.5em, 90%, 46em);
 
   --light-salte-blue: hsl(252, 100%, 67%);
   --light-royal-blue: hsl(241, 81%, 54%);
@@ -8,10 +8,10 @@
   --violet-blue: hsla(256, 72%, 46%, 1);
   --persian-blue: hsla(241, 72%, 46%, 0);
 
-  --light-red: hsl(0, 100%, 67%, 0.6);
-  --orangey-yellow: hsl(39, 100%, 56%, 0.6);
-  --green-teal: hsl(166, 100%, 37%, 0.6);
-  --cobalt-blue: hsl(234, 85%, 45%, 0.6);
+  --light-red: hsl(0, 100%, 67%, 0.4);
+  --orangey-yellow: hsl(39, 100%, 56%, 0.4);
+  --green-teal: hsl(166, 100%, 37%, 0.4);
+  --cobalt-blue: hsl(234, 85%, 45%, 0.4);
 
 
   --light-lavender: hsl(241, 100%, 89%);
@@ -20,7 +20,7 @@
 
 body {
   margin: 0;
-  font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 
 main {
@@ -48,12 +48,12 @@ main {
   flex-direction: column;
   align-items: center;
   color: var(--light-lavender);
-  background: linear-gradient(180deg, var(--light-salte-blue) -20%, var(--light-royal-blue) 150%);
+  background: linear-gradient(180deg, var(--light-salte-blue) -40%, var(--light-royal-blue));
 }
 
-.score h1 {
+.score h1{
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.875rem;
 }
 
 .score p {
@@ -63,30 +63,35 @@ main {
 
 .score .score_circle {
   margin-bottom: 3rem;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 5rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 6rem;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, var(--violet-blue), var(--persian-blue))
+  background: linear-gradient(180deg, var(--violet-blue), var(--persian-blue) 120%)
 }
 
 .score .score_circle p span {
   display: block;
   font-size: 3.6rem;
   color: white;
+  font-weight: bold;
 }
-
+.score .score_text {
+  width: 25ch;
+}
 .score .score_text span {
+  font-weight: bold;
   display: block;
   color: white;
   font-size: 1.6rem;
+  margin-bottom: .5rem;
 }
 
 .score_details {
   flex: 1;
   min-width: 16em;
-  padding: 1.5rem 1rem;
+  padding: 2rem;
   box-sizing: border-box;
   border-radius: 1.25rem;
   display: flex;
@@ -107,6 +112,11 @@ main {
   margin: 0.75rem 0;
   border-radius: 0.75rem;
   box-sizing: border-box;
+}
+.detail p:first-child{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 .detail.reaction {

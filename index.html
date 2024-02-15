@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Results summary component</title>
 </head>
@@ -27,22 +31,22 @@
         </p>
       </div>
       <div class="score_details">
-        <h3>Summary:</h3>
+        <h2>Summary:</h2>
         <div class="details">
           <div class="detail reaction">
-            <p><b>Reaction</b></p>
+            <p><img src="assets/images/icon-reaction.svg" alt=""><b>Reaction</b></p>
             <p><b id="Reaction">0</b>/100</p>
           </div>
           <div class="detail memory">
-            <p><b>Memory</b></p>
+            <p><img src="assets/images/icon-memory.svg" alt=""><b>Memory</b></p>
             <p><b id="Memory">0</b>/100</p>
           </div>
           <div class="detail verbal">
-            <p><b>Verbal</b></p>
+            <p><img src="assets/images/icon-verbal.svg" alt=""><b>Verbal</b></p>
             <p><b id="Verbal">0</b>/100</p>
           </div>
           <div class="detail visual">
-            <p><b>Visual</b></p>
+            <p><img src="assets/images/icon-visual.svg" alt=""><b>Visual</b></p>
             <p><b id="Visual">0</b>/100</p>
           </div>
         </div>
@@ -52,5 +56,4 @@
   </main>
   <script src="main.js"></script>
 </body>
-
 </html>

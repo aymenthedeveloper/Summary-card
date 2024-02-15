@@ -5,28 +5,21 @@ const data = [
   },
   {
     "category": "Reaction",
-    "score": 80,
-    "icon": "./assets/images/icon-reaction.svg"
+    "score": 80
   },
   {
     "category": "Memory",
-    "score": 92,
-    "icon": "./assets/images/icon-memory.svg"
+    "score": 92
   },
   {
     "category": "Verbal",
-    "score": 61,
-    "icon": "./assets/images/icon-verbal.svg"
+    "score": 61
   },
   {
     "category": "Visual",
-    "score": 72,
-    "icon": "./assets/images/icon-visual.svg"
+    "score": 72
   }
 ];
-
-
-
 
 var j = 1;
 data.forEach(element => {
