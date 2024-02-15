@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Results summary component</title>
+</head>
+
+<body>
+  <main>
+    <div class="card_body">
+      <div class="score">
+        <h1>Your Result</h1>
+        <div class="score_circle">
+          <p>
+            <span id="main_score">0</span>
+            of 100
+          </p>
+        </div>
+        <p class="score_text">
+          <span>Great</span>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="score_details">
+        <h3>Summary:</h3>
+        <div class="details">
+          <div class="detail reaction">
+            <p><b>Reaction</b></p>
+            <p><b id="Reaction">0</b>/100</p>
+          </div>
+          <div class="detail memory">
+            <p><b>Memory</b></p>
+            <p><b id="Memory">0</b>/100</p>
+          </div>
+          <div class="detail verbal">
+            <p><b>Verbal</b></p>
+            <p><b id="Verbal">0</b>/100</p>
+          </div>
+          <div class="detail visual">
+            <p><b>Visual</b></p>
+            <p><b id="Visual">0</b>/100</p>
+          </div>
+        </div>
+        <button onclick="window.location.reload()">Continue</button>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>

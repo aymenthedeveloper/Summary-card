@@ -1,0 +1,152 @@
+:root {
+  --radius: 1.5rem;
+  --card-width: clamp(26.5em, 90%, 50em);
+
+  --light-salte-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --light-red: hsl(0, 100%, 67%, 0.6);
+  --orangey-yellow: hsl(39, 100%, 56%, 0.6);
+  --green-teal: hsl(166, 100%, 37%, 0.6);
+  --cobalt-blue: hsl(234, 85%, 45%, 0.6);
+
+
+  --light-lavender: hsl(241, 100%, 89%);
+  --very-dark-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card_body {
+  width: var(--card-width);
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.score {
+  flex: 1;
+  min-width: 16em;
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--light-lavender);
+  background: linear-gradient(180deg, var(--light-salte-blue) -20%, var(--light-royal-blue) 150%);
+}
+
+.score h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.score p {
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.score .score_circle {
+  margin-bottom: 3rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, var(--violet-blue), var(--persian-blue))
+}
+
+.score .score_circle p span {
+  display: block;
+  font-size: 3.6rem;
+  color: white;
+}
+
+.score .score_text span {
+  display: block;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.score_details {
+  flex: 1;
+  min-width: 16em;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0.75rem 0;
+  border-radius: 0.75rem;
+  box-sizing: border-box;
+}
+
+.detail.reaction {
+  background-color: var(--light-red);
+}
+
+.detail.memory {
+  background-color: var(--orangey-yellow);
+}
+
+.detail.verbal {
+  background-color: var(--green-teal);
+}
+
+.detail.visual {
+  background-color: var(--cobalt-blue);
+}
+
+.score_details button {
+  width: 100%;
+  padding: 1.2rem 0;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  background-color: var(--very-dark-blue);
+}
+
+.score_details button:active {
+  background: linear-gradient(180deg, var(--light-salte-blue) -50%, var(--light-royal-blue) 150%);
+}
+
+@media screen and (max-width: 26.5em) {
+  :root {
+    --card-width: 100%;
+    --radius: 0 0 1.5rem 1.5rem;
+  }
+
+  main {
+    display: initial;
+  }
+}
