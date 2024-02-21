@@ -8,14 +8,16 @@
   --violet-blue: hsla(256, 72%, 46%, 1);
   --persian-blue: hsla(241, 72%, 46%, 0);
 
-  --light-red: hsl(0, 100%, 67%, 0.4);
-  --orangey-yellow: hsl(39, 100%, 56%, 0.4);
-  --green-teal: hsl(166, 100%, 37%, 0.4);
-  --cobalt-blue: hsl(234, 85%, 45%, 0.4);
+  --light-red: hsl(0, 100%, 67%, 0.1);
+  --orangey-yellow: hsl(39, 100%, 56%, 0.1);
+  --green-teal: hsl(166, 100%, 37%, 0.1);
+  --cobalt-blue: hsl(234, 85%, 45%, 0.1);
 
 
   --light-lavender: hsl(241, 100%, 89%);
   --very-dark-blue: hsl(224, 30%, 27%);
+
+  --titles: 1.5rem;
 }
 
 body {
@@ -34,7 +36,7 @@ main {
   border-radius: var(--radius);
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
 
@@ -53,7 +55,7 @@ main {
 
 .score h1{
   margin-bottom: 2rem;
-  font-size: 1.875rem;
+  font-size: var(--titles);
 }
 
 .score p {
@@ -62,9 +64,9 @@ main {
 }
 
 .score .score_circle {
-  margin-bottom: 3rem;
-  width: 12rem;
-  height: 12rem;
+  margin-bottom: 1rem;
+  width: 12.2rem;
+  height: 12.2rem;
   border-radius: 6rem;
   display: grid;
   place-items: center;
@@ -73,35 +75,38 @@ main {
 
 .score .score_circle p span {
   display: block;
-  font-size: 3.6rem;
+  font-size: 4.4rem;
   color: white;
   font-weight: bold;
 }
 .score .score_text {
   width: 25ch;
+  margin-bottom: 2em;
 }
 .score .score_text span {
   font-weight: bold;
   display: block;
   color: white;
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-bottom: .5rem;
 }
 
 .score_details {
   flex: 1;
   min-width: 16em;
-  padding: 2rem;
+  padding: 1rem;
   box-sizing: border-box;
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
+.score_details h2{font-size: var(--titles);}
 
 .details {
   display: flex;
   flex-direction: column;
+  padding-inline: 1.5rem;
 }
 
 .detail {
@@ -135,7 +140,7 @@ main {
   background-color: var(--cobalt-blue);
 }
 
-.score_details button {
+.score_details .details button {
   width: 100%;
   padding: 1.2rem 0;
   margin-top: 1rem;
@@ -144,6 +149,7 @@ main {
   color: white;
   border: none;
   background-color: var(--very-dark-blue);
+  box-sizing: border-box;
 }
 
 .score_details button:active {
